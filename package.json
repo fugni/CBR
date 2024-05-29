@@ -1,0 +1,14 @@
+{
+  "name": "cbr",
+  "version": "1.0.0",
+  "description": "data from [https://github.com/Stroomer/theorie-rijbewijs-b-raw-data/tree/main](https://github.com/Stroomer/theorie-rijbewijs-b-raw-data/tree/main)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
