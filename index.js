@@ -1,13 +1,18 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-var queries = require('./scripts/queries.js');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.json( queries.getAll() );
+    res.json({ message: 'ok' });
 });
 
+require('./src/routes.js')(app);
+
 app.listen(port, () => {
-  console.log(`http://localhost:${port}`);
+    console.log(`listening on http://localhost:${port}`);
 });
